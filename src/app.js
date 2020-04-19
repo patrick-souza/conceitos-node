@@ -10,6 +10,10 @@ app.use(cors());
 
 const repositories = [];
 
+app.get("/", (request, response) => {
+  return response.json({ healthy: "ok" });
+});
+
 app.get("/repositories", (request, response) => {
   return response.json(repositories);
 });
